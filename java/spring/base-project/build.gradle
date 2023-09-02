@@ -16,37 +16,68 @@ java {
 ext {
     springCloudVersion = "2022.0.4"
     springdocOpenapiVersion = "2.1.0"
+
+    slf4jApiVersion = "2.0.7"
     lombokVersion = "1.18.28"
     mapstructVersion = "1.5.5.Final"
     lombokMapstructBindingVersion = "0.2.0"
+    jakartaEeBomVersion = "10.0.0"
+    apacheCommonsLangVersion = "3.13.0"
+    apacheCommonsIoVersion = "2.13.0"
+    googleLibrariesBomVersion = "26.22.0"
     jacksonBomVersion = "2.15.2"
     jsonPathVersion = "2.8.0"
     okHttpBomVersion = "4.11.0"
+
+    junitBomVersion = "5.10.0"
+    mockitoBomVersion = "5.5.0"
+    assertjBomVersion = "3.24.2"
+    testcontainersBomVersion = "1.19.0"
 }
 
 dependencies {
     implementation platform("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
-    implementation platform("com.fasterxml.jackson:jackson-bom:$jacksonBomVersion")
-
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-webflux"
-
     implementation "org.springdoc:springdoc-openapi-starter-webflux-ui:$springdocOpenapiVersion"
+    implementation "org.springframework.boot:spring-boot-starter-data-jdbc"
+    runtimeOnly "com.h2database:h2"
+    implementation "org.springframework.kafka:spring-kafka"
+
+    implementation "org.slf4j:slf4j-api:$slf4jApiVersion"
     compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     implementation "org.mapstruct:mapstruct:$mapstructVersion"
+    annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
+    annotationProcessor "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"
+    implementation platform("jakarta.platform:jakarta.jakartaee-bom:$jakartaEeBomVersion")
+    implementation "jakarta.annotation:jakarta.annotation-api"
+    implementation "org.apache.commons:commons-lang3:$apacheCommonsLangVersion"
+    implementation "commons-io:commons-io:$apacheCommonsIoVersion"
+    implementation platform("com.google.cloud:libraries-bom:$googleLibrariesBomVersion")
+    implementation "com.google.guava:guava"
+    implementation "com.google.code.gson:gson"
+    implementation platform("com.fasterxml.jackson:jackson-bom:$jacksonBomVersion")
     implementation "com.fasterxml.jackson.core:jackson-databind"
     implementation "com.jayway.jsonpath:json-path:$jsonPathVersion"
-    runtimeOnly "org.postgresql:postgresql"
-
-    annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
-    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
-    annotationProcessor "org.projectlombok:lombok-mapstruct-binding:$lombokMapstructBindingVersion"
-
-    testImplementation platform("com.squareup.okhttp3:okhttp-bom:$okHttpBomVersion")
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$okHttpBomVersion")
+    implementation "com.squareup.okhttp3:okhttp"
 
     testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "org.springframework.kafka:spring-kafka-test"
+    testImplementation "org.springframework.boot:spring-boot-testcontainers"
     testImplementation "io.projectreactor:reactor-test"
     testImplementation "com.squareup.okhttp3:mockwebserver"
+
+    testImplementation platform("org.junit:junit-bom:$junitBomVersion")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation platform("org.mockito:mockito-bom:$mockitoBomVersion")
+    testImplementation "org.mockito:mockito-core"
+    testImplementation platform("org.assertj:assertj-bom:$assertjBomVersion")
+    testImplementation "org.assertj:assertj-core"
+    testImplementation platform("org.testcontainers:testcontainers-bom:$testcontainersBomVersion")
+    testImplementation "org.testcontainers:testcontainers"
+    testImplementation "org.testcontainers:junit-jupiter"
 }
 
 tasks.named("test") {
