@@ -3,8 +3,6 @@ package com.github.mroose.backend.controller;
 import com.github.mroose.backend.dto.SampleDto;
 import com.github.mroose.backend.service.SampleService;
 import lombok.RequiredArgsConstructor;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 import ru.tinkoff.kora.http.common.HttpMethod;
 import ru.tinkoff.kora.http.common.annotation.HttpRoute;
 import ru.tinkoff.kora.http.server.common.annotation.HttpController;
