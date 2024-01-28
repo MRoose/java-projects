@@ -1,37 +1,37 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.10"
-    kotlin("plugin.spring") version "1.9.10"
-    id("org.springframework.boot") version "3.1.3"
-    id("io.spring.dependency-management") version "1.1.3"
+    kotlin("jvm") version "1.9.22"
+    kotlin("plugin.spring") version "1.9.22"
+    id("org.springframework.boot") version "3.2.2"
+    id("io.spring.dependency-management") version "1.1.4"
 }
 
 group = "com.github.mroose"
 version = "latest"
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
-val springCloudVersion = "2022.0.4"
+val springCloudVersion = "2023.0.0"
 val springdocOpenapiVersion = "2.1.0"
 
-val kotlinVersion = "1.9.10"
-val slf4jApiVersion = "2.0.7"
+val kotlinVersion = "1.9.22"
+val slf4jApiVersion = "2.0.11"
 val mapstructVersion = "1.5.5.Final"
 val jakartaEeBomVersion = "10.0.0"
-val apacheCommonsLangVersion = "3.13.0"
-val apacheCommonsIoVersion = "2.13.0"
-val googleLibrariesBomVersion = "26.22.0"
-val jacksonBomVersion = "2.15.2"
-val jsonPathVersion = "2.8.0"
-val okHttpBomVersion = "4.11.0"
+val apacheCommonsLangVersion = "3.14.0"
+val apacheCommonsIoVersion = "2.15.1"
+val googleLibrariesBomVersion = "26.30.0"
+val jacksonBomVersion = "2.16.1"
+val jsonPathVersion = "2.9.0"
+val okHttpBomVersion = "4.12.0"
 
-val junitBomVersion = "5.10.0"
-val mockitoBomVersion = "5.5.0"
-val assertjBomVersion = "3.24.2"
-val testcontainersBomVersion = "1.19.0"
+val junitBomVersion = "5.10.1"
+val mockitoBomVersion = "5.10.0"
+val assertjBomVersion = "3.25.2"
+val testcontainersBomVersion = "1.19.4"
 
 dependencies {
     implementation(platform("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"))
@@ -80,7 +80,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
 }
 

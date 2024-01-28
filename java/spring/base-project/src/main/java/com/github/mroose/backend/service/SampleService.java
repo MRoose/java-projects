@@ -6,8 +6,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import com.github.mroose.backend.dto.SampleDto;
 
-@RequiredArgsConstructor
 @Service
+@RequiredArgsConstructor
 public class SampleService {
 
     private final WebClient baseWebClient;

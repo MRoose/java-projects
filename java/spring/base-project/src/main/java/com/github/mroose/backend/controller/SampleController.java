@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.github.mroose.backend.service.SampleService;
 import reactor.core.publisher.Flux;
 
-@RequiredArgsConstructor
 @RestController
+@RequiredArgsConstructor
 public class SampleController {
 
     private final SampleService sampleService;

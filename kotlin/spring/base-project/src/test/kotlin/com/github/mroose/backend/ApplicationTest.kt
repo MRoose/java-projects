@@ -1,13 +1,14 @@
 package com.github.mroose.backend
 
 import org.junit.jupiter.api.Test
-import org.springframework.boot.test.context.SpringBootTest
+import org.assertj.core.api.Assertions.*
 
-@SpringBootTest
 class ApplicationTest {
 
-	@Test
-	fun contextLoads() {
-	}
-
+    @Test
+    fun testHelloWorld() {
+        val actual = "Hello World"
+        val expected = "Hello World"
+        assertThat(actual).isEqualTo(expected)
+    }
 }

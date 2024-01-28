@@ -1,7 +1,7 @@
 plugins {
     id "java"
-    id "org.springframework.boot" version "3.1.3"
-    id "io.spring.dependency-management" version "1.1.3"
+    id "org.springframework.boot" version "3.2.2"
+    id "io.spring.dependency-management" version "1.1.4"
 }
 
 group = "com.github.mroose"
@@ -9,30 +9,30 @@ version = "latest"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
 ext {
-    springCloudVersion = "2022.0.4"
+    springCloudVersion = "2023.0.0"
     springdocOpenapiVersion = "2.1.0"
 
-    slf4jApiVersion = "2.0.7"
-    lombokVersion = "1.18.28"
+    slf4jApiVersion = "2.0.11"
+    lombokVersion = "1.18.30"
     mapstructVersion = "1.5.5.Final"
     lombokMapstructBindingVersion = "0.2.0"
     jakartaEeBomVersion = "10.0.0"
-    apacheCommonsLangVersion = "3.13.0"
-    apacheCommonsIoVersion = "2.13.0"
-    googleLibrariesBomVersion = "26.22.0"
-    jacksonBomVersion = "2.15.2"
-    jsonPathVersion = "2.8.0"
-    okHttpBomVersion = "4.11.0"
+    apacheCommonsLangVersion = "3.14.0"
+    apacheCommonsIoVersion = "2.15.1"
+    googleLibrariesBomVersion = "26.30.0"
+    jacksonBomVersion = "2.16.1"
+    jsonPathVersion = "2.9.0"
+    okHttpBomVersion = "4.12.0"
 
-    junitBomVersion = "5.10.0"
-    mockitoBomVersion = "5.5.0"
-    assertjBomVersion = "3.24.2"
-    testcontainersBomVersion = "1.19.0"
+    junitBomVersion = "5.10.1"
+    mockitoBomVersion = "5.10.0"
+    assertjBomVersion = "3.25.2"
+    testcontainersBomVersion = "1.19.4"
 }
 
 dependencies {
@@ -49,7 +49,7 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     implementation "org.mapstruct:mapstruct:$mapstructVersion"
     annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
-    annotationProcessor "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"
+    annotationProcessor "org.projectlombok:lombok-mapstruct-binding:$lombokMapstructBindingVersion"
     implementation platform("jakarta.platform:jakarta.jakartaee-bom:$jakartaEeBomVersion")
     implementation "jakarta.annotation:jakarta.annotation-api"
     implementation "org.apache.commons:commons-lang3:$apacheCommonsLangVersion"
