@@ -20,7 +20,7 @@
         <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
 
         <spring-cloud.version>2023.0.0</spring-cloud.version>
-        <springdoc-openapi.version>2.1.0</springdoc-openapi.version>
+        <springdoc-openapi.version>2.3.0</springdoc-openapi.version>
 
         <slf4j-api.version>2.0.11</slf4j-api.version>
         <lombok.version>1.18.30</lombok.version>
@@ -280,6 +280,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

@@ -5,6 +5,7 @@ plugins {
     kotlin("plugin.spring") version "1.9.22"
     id("org.springframework.boot") version "3.2.2"
     id("io.spring.dependency-management") version "1.1.4"
+    id("org.graalvm.buildtools.native") version "0.10.0"
 }
 
 group = "com.github.mroose"
@@ -15,7 +16,7 @@ kotlin {
 }
 
 val springCloudVersion = "2023.0.0"
-val springdocOpenapiVersion = "2.1.0"
+val springdocOpenapiVersion = "2.3.0"
 
 val kotlinVersion = "1.9.22"
 val slf4jApiVersion = "2.0.11"
