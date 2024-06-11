@@ -10,25 +10,25 @@
 
     <properties>
         <java.version>21</java.version>
-        <kotlin.version>1.9.22</kotlin.version>
+        <kotlin.version>2.0.0</kotlin.version>
         <kotlin.compiler.jvmTarget>21</kotlin.compiler.jvmTarget>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
-        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
 
-        <slf4j-api.version>2.0.11</slf4j-api.version>
+        <slf4j-api.version>2.0.13</slf4j-api.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <jakartaee-bom.version>10.0.0</jakartaee-bom.version>
         <apache-commons-lang.version>3.14.0</apache-commons-lang.version>
-        <apache-commons-io.version>2.15.1</apache-commons-io.version>
-        <google-libraries-bom.version>26.30.0</google-libraries-bom.version>
-        <jackson-bom.version>2.16.1</jackson-bom.version>
+        <apache-commons-io.version>2.16.1</apache-commons-io.version>
+        <google-libraries-bom.version>26.40.0</google-libraries-bom.version>
+        <jackson-bom.version>2.17.1</jackson-bom.version>
         <json-path.version>2.9.0</json-path.version>
         <okhttp-bom.version>4.12.0</okhttp-bom.version>
 
-        <junit-bom.version>5.10.1</junit-bom.version>
-        <mockito-bom.version>5.10.0</mockito-bom.version>
-        <assertj-bom.version>3.25.2</assertj-bom.version>
-        <testcontainers-bom.version>1.19.4</testcontainers-bom.version>
+        <junit-bom.version>5.10.2</junit-bom.version>
+        <mockito-bom.version>5.12.0</mockito-bom.version>
+        <assertj-bom.version>3.26.0</assertj-bom.version>
+        <testcontainers-bom.version>1.19.8</testcontainers-bom.version>
     </properties>
 
 

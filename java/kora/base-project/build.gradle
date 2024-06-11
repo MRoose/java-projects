@@ -14,22 +14,22 @@ java {
 ext {
     koraVersion = "1.0.3"
 
-    slf4jApiVersion = "2.0.11"
-    lombokVersion = "1.18.30"
+    slf4jApiVersion = "2.0.13"
+    lombokVersion = "1.18.32"
     mapstructVersion = "1.5.5.Final"
     lombokMapstructBindingVersion = "0.2.0"
     jakartaEeBomVersion = "10.0.0"
     apacheCommonsLangVersion = "3.14.0"
-    apacheCommonsIoVersion = "2.15.1"
-    googleLibrariesBomVersion = "26.30.0"
-    jacksonBomVersion = "2.16.1"
+    apacheCommonsIoVersion = "2.16.1"
+    googleLibrariesBomVersion = "26.40.0"
+    jacksonBomVersion = "2.17.1"
     jsonPathVersion = "2.9.0"
     okHttpBomVersion = "4.12.0"
 
-    junitBomVersion = "5.10.1"
-    mockitoBomVersion = "5.10.0"
-    assertjBomVersion = "3.25.2"
-    testcontainersBomVersion = "1.19.4"
+    junitBomVersion = "5.10.2"
+    mockitoBomVersion = "5.12.0"
+    assertjBomVersion = "3.26.0"
+    testcontainersBomVersion = "1.19.8"
 }
 
 dependencies {

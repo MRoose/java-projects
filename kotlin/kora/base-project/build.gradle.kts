@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.22"
+    kotlin("jvm") version "2.0.0"
 }
 
 group = "com.github.mroose"
@@ -13,21 +13,21 @@ kotlin {
 
 val koraVersion = "1.0.3"
 
-val kotlinVersion = "1.9.22"
-val slf4jApiVersion = "2.0.11"
+val kotlinVersion = "2.0.0"
+val slf4jApiVersion = "2.0.13"
 val mapstructVersion = "1.5.5.Final"
 val jakartaEeBomVersion = "10.0.0"
 val apacheCommonsLangVersion = "3.14.0"
-val apacheCommonsIoVersion = "2.15.1"
-val googleLibrariesBomVersion = "26.30.0"
-val jacksonBomVersion = "2.16.1"
+val apacheCommonsIoVersion = "2.16.1"
+val googleLibrariesBomVersion = "26.40.0"
+val jacksonBomVersion = "2.17.1"
 val jsonPathVersion = "2.9.0"
 val okHttpBomVersion = "4.12.0"
 
-val junitBomVersion = "5.10.1"
-val mockitoBomVersion = "5.10.0"
-val assertjBomVersion = "3.25.2"
-val testcontainersBomVersion = "1.19.4"
+val junitBomVersion = "5.10.2"
+val mockitoBomVersion = "5.12.0"
+val assertjBomVersion = "3.26.0"
+val testcontainersBomVersion = "1.19.8"
 
 dependencies {
     implementation(platform("ru.tinkoff.kora:kora-parent:$koraVersion"))
